@@ -1,0 +1,38 @@
+Description : 
+
+This C++ banking system simulates core banking functionalities, including account creation, deposits, withdrawals, money transfers, balance checks, and transaction history. It uses three main classes: Transaction for tracking transactions, Account for managing user details and account operations, and BankingSystem for handling multiple accounts and transactions. The system generates random account numbers and passwords for security. Users can interact via a menu-driven interface, perform secure transactions, and view their financial records. The code ensures authentication before accessing account details. It efficiently manages accounts using vectors and implements basic error handling, making it a simple yet effective banking simulation.
+
+
+Code Explanation : 
+
+(Classes and Their Work):
+
+1. Transaction Class
+Stores transaction details (account number, type, amount).
+Displays transaction history.
+
+2. Account Class
+createAccount() → Creates a new account with user details, generates account number & password.
+displayAccount() → Shows account details.
+deposit(double amount) → Adds money to the account.
+withdraw(double amount) → Deducts money if the balance is sufficient.
+checkBalance() → Displays current balance.
+Helper Functions:
+isDigitsOnly() → Validates Aadhaar number input.
+generateRandomNumber() → Generates a 12-digit account number.
+generateRandomPassword() → Generates an 8-character secure password.
+
+3. BankingSystem Class
+createAccount() → Calls Account::createAccount() to create and store an account.
+depositMoney() → Deposits amount into an account and records a transaction.
+withdrawMoney() → Withdraws amount if sufficient balance is available and records a transaction.
+transferMoney() → Transfers money between accounts if the sender has enough balance.
+viewCustomerDetails() → Displays account details after verifying account number & password.
+checkBalance() → Shows the balance after authentication.
+showTransactions() → Displays all recorded transactions.
+
+4. main() Function
+Implements a menu-driven system for user interaction.
+Calls relevant functions based on user input.
+Loops until the user chooses to exit.
+
